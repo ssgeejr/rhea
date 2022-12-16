@@ -1,9 +1,10 @@
-version: '3.9'
+version: '3'
 services:
-  apache:
-    image: httpd:2.4.54
-    container_name: rhea 
-    ports:
-    - '8080:80'
-    volumes:
-    - /opt/apps/website:/usr/local/apache2/htdocs
+    apache:
+        image: httpd:2.4.54
+        container_name: thea
+        restart: always
+        ports:
+            - 80:80
+        volumes:
+            - /opt/apps/website:/usr/local/apache2/htdocs
